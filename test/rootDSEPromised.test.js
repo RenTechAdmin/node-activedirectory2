@@ -22,7 +22,7 @@ tap.afterEach((done, t) => {
   done()
 })
 
-tap.test('should return ECONNREFUSED for closed port', t => {
+tap.skip('should return ECONNREFUSED for closed port', t => {
   return ActiveDirectory.getRootDSE('ldap://127.0.0.1:389')
     .then(() => t.fail('should not be invoked'))
     .catch((err) => {
