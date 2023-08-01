@@ -31,6 +31,7 @@ schema.com.domain['domain groups'] = {
   'Account - Department #3', 'Account - Department #4',
   'All Directors', 'Another Group', 'Authors', 'Budget Users', 'Domain Admins',
   'My Group', 'My Group #1', 'My Group #2', 'My Nested Users', 'My Users',
+  'My Nested Nested Users', 'My Nested Nested Nested Users',
   'Parking Department', 'Parking Users', 'Security Users', 'Security Owners',
   'System Directors',
   'VPN Users',
@@ -88,6 +89,14 @@ schema.com.domain['domain groups']['vpn users']
 schema.com.domain['domain groups']['web users']
   .value.attributes.memberOf.push(
     schema.com.domain['domain groups']['my users'].value
+  )
+schema.com.domain['domain groups']['my nested nested users']
+  .value.attributes.memberOf.push(
+    schema.com.domain['domain groups']['my nested users'].value
+  )
+schema.com.domain['domain groups']['my nested nested nested users']
+  .value.attributes.memberOf.push(
+    schema.com.domain['domain groups']['my nested nested users'].value
   )
 
 schema.com.domain['domain groups']['another group']
