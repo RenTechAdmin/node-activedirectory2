@@ -10,6 +10,7 @@ nodeJob {
   reviewers = "Linkurious/backend-chapter"
 
   createGitTag = true
+  githubRelease = true
   gitTagPrefix = 'v'
   runBookeeping = true
 }
