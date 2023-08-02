@@ -1,7 +1,7 @@
 {
   "author": "George Heeres <gheeres@gmail.com>",
   "name": "@linkurious/activedirectory2",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "ActiveDirectory is an ldapjs client for authN (authentication) and authZ (authorization) for Microsoft Active Directory with range retrieval support for large Active Directory installations.",
   "contributors": [
     {
@@ -35,7 +35,10 @@
     "lint:ci": "standard",
     "test": "tap --no-coverage-report",
     "test:ci": "tap",
-    "doc": "jsdoc -c jsdoc.json"
+    "doc": "jsdoc -c jsdoc.json",
+    "bump:patch": "bump2version patch && npm version --no-git-tag-version patch",
+    "bump:minor": "bump2version minor && npm version --no-git-tag-version minor",
+    "bump:major": "bump2version major && npm version --no-git-tag-version --no-commit-hooks --no-workspaces-update major"
   },
   "precommit": [
     "lint",
