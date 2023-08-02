@@ -36,6 +36,24 @@ module.exports = {
       dn: 'CN=First Last Name,OU=Domain Users,DC=domain,DC=com'
     }
   },
+  // Test settings for getGroupMembershipForDN
+  getGroupMembershipForDN: {
+    groups: [{
+      dn: 'CN=My Users,OU=Domain Groups,DC=domain,DC=com',
+      groups: [
+        'My Nested Users', 'VPN Users', 'Web Users'
+      ],
+      nestedGroups: [
+        'My Nested Nested Users', 'My Nested Nested Nested Users'
+      ]
+    }, {
+      dn: 'CN=Authors,OU=Domain Groups,DC=domain,DC=com',
+      groups: [
+        'Editors', 'Contributors', 'Web Editors', 'Web Users'
+      ],
+      nestedGroups: []
+    }]
+  },
   // Test settings for getGroupMembershipForGroup
   getGroupMembershipForGroup: {
     groups: [{

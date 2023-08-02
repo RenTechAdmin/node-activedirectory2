@@ -28,7 +28,7 @@ tap.test('should return ECONNREFUSED for closed port', t => {
     .catch((err) => {
       t.ok(err)
       t.type(err, Error)
-      t.equal(err.errno, 'ECONNREFUSED')
+      t.equal(err.code, 'ECONNREFUSED')
     })
 })
 

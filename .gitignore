@@ -4,6 +4,7 @@ wallaby.js
 
 .project
 .idea
+.vscode
 
 samples
 node_modules
